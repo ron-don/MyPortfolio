@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- the header section -->
     <div id="header">
         <div class="container">
             <nav>
@@ -26,6 +27,77 @@
             </div>
         </div>
     </div>
-    
+    <!-- the about section -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/background.jpg" >
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Voluptas eius libero voluptates ea officiis, nam necessitatibus quaerat. 
+                        Animi, veritatis itaque. !Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Voluptas eius libero voluptates ea officiis, nam necessitatibus quaerat. 
+                        Animi, veritatis itaque!</p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')" >Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                                <li><span>Web Development</span><br>Web App Development</li>
+                                <li><span>App Development</span><br>Building Android/iOS apps</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>2021 - Current</span><br>UI/UX Design Training at ET Institue</li>
+                                <li><span>2019 -2021</span><br>Software Developer at Nouveta</li>
+                                <li><span>2017 -2019</span><br>Software Developer at Intelligent Solutions</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2012 - 2015</span><br>Jomo Kenyatta University of Agriculture and Technology</li>
+                                <li><span>2008 - 2011</span><br>St. Thomas Aquinas High School</li>
+                                <li><span>1999 - 2007</span><br>Bidii Primary School</li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- the services sections -->
+    <div id="services">
+        
+    </div>
+
+    <!-- js code for changing tabs on about section(skills, education and experience) -->
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for(tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+
+            for(tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+
+        }
+
+    </script>
 </body>
 </html>
