@@ -36,7 +36,13 @@ nav {
 }
 
 .logo {
-    width: 190px;
+    font-size: 35px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+span {
+    color: #ff004f;
 }
 
 nav ul li {
@@ -159,3 +165,5 @@ nav ul li a:hover::after {
 .tab-contents.active-tab {
     display: block;
 }
+
+/* ------------services------------- */
