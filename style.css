@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: #080808;
     color: #000000;
@@ -222,7 +226,7 @@ nav ul li a:hover::after {
 .work-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
+    grid-gap: 30px;
     margin-top: 50px;
 }
 
@@ -243,7 +247,7 @@ nav ul li a:hover::after {
     color: #fff;
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0,0,0,0.6), #ff0033);
+    background: linear-gradient(rgba(0,0,0,0.6), #ff2c56);
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -377,4 +381,109 @@ form .btn2 {
     background: #262626;
     font-weight: 300;
     margin-top: 20px;
+}
+
+/* --------------------------css for small screens---------------------- */
+
+nav .fas {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    #header {
+        background-image: url(images/phone_background1.jpg);
+    }
+
+    .header-text {
+        margin-top: 100%;
+        font-size: 18px;
+    }
+
+    .header-text p {
+        font-weight: 600;
+    }
+
+    .header-text h1 {
+        font-size: 30px;
+    }
+
+    nav .fas {
+        display: block;
+        font-size: 25px;
+    }
+
+    nav ul {
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -180px;
+        width: 180px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px;
+        cursor: pointer;
+    }
+
+    nav ul .fas {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    #about {
+        padding: 20px;
+    }
+
+    .sub-title {
+        font-size: 40px;
+    }
+
+    .about-col-1, .about-col-2 {
+        flex-basis: 100%;
+    }
+
+    .about-col-1 {
+        margin-bottom: 30px;
+    }
+
+    .about-col-2 {
+        font-size: 13px;
+    }
+
+    .tab-links {
+        font-size: 16px;
+        margin-right: 20px;
+    }
+
+    #services {
+        padding: 30px 10px;
+    }
+
+    #portfolio {
+        padding: 50px 10px;
+    }
+
+    .layer {
+        font-size: 12px;
+    }
+
+    .layer h3 {
+        font-weight: 600;
+        font-size: 25px;
+    }
+
+    .contact-left, .contact-right {
+        flex-basis: 100%;
+    }
+
+    .copyright {
+        font-size: 14px;
+    }
 }
