@@ -14,13 +14,15 @@
         <div class="container">
             <nav>
                 <h1 class="logo">Portfo<span>lio</span></h1>
-                <ul>
+                <ul id="sideMenu">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closeMenu()"></i>
                 </ul>
+                <i class="fas fa-bars" onclick="openMenu()"></i>
             </nav>
             <div class="header-text">
                 <p>Software Developer</p>
@@ -38,11 +40,10 @@
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
                     <p>I am a Software Developer and Technical consultant with 6 years of experience in delivering innovative IT solutions and 
-                        creatively solving problems for the benefit of the clients. I am very determined, excellent at problem-solving, always eager and willing 
-                        to learn new things, work hard to achieve my goals, and I give 100% at all times because nothing is impossible if you are consistent and hardworking. 
-                        I'm also a team player and I love working and connecting with people from different backgrounds.
-                        My career objective is to seek a relevant and challenging position in an enabling environment where my current 
-                        qualifications, abilities, and experience will be an asset.</p>
+                        creatively solving problems for the benefit of the clients.<br> I am very determined, excellent at problem-solving, always eager and willing 
+                        to learn new things, work hard to achieve my goals, and I give 100% at all times because I believe nothing is impossible if you are consistent and hardworking.<br> 
+                        I'm also a team player and I love working and connecting with people from different backgrounds.<br>
+                        My career objective is to seek a relevant and challenging position in an enabling environment where my current qualifications, abilities, and experience will be an asset.</p>
                         <div class="tab-titles">
                             <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                             <p class="tab-links" onclick="opentab('experience')" >Experience</p>
@@ -206,6 +207,22 @@
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab");
 
+        }
+
+    </script>
+
+
+<!-- js code for opening and closing side menu in width < 600px -->
+    <script>
+
+        var sidemenu = document.getElementById("sideMenu");
+
+        function openMenu() {
+            sidemenu.style.right = "0";
+        }
+
+        function closeMenu() {
+            sidemenu.style.right = "-180px";
         }
 
     </script>
